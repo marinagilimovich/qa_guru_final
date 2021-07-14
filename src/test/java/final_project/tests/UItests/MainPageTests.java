@@ -1,8 +1,11 @@
-package profitero.site.autotests.tests;
+package final_project.tests.UItests;
 
+import io.qameta.allure.Feature;
+import io.qameta.allure.Owner;
 import io.qameta.allure.Story;
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Tag;
+import org.junit.jupiter.api.Tags;
 import org.junit.jupiter.api.Test;
 
 import static com.codeborne.selenide.Condition.attribute;
@@ -11,12 +14,14 @@ import static com.codeborne.selenide.Selectors.byText;
 import static com.codeborne.selenide.Selenide.*;
 import static io.qameta.allure.Allure.step;
 
-@Story("Main page test")
+@Owner("mhilimovich")
+@Feature("Main page")
 public class MainPageTests extends TestBase {
     String mainPageURL = "https://www.profitero.com/";
 
     @Test
-    @Tag("ui")
+    @Story("Verification of the main page")
+    @Tags({@Tag("web"), @Tag("ui")})
     @DisplayName("Opening the main page")
     public void checkMainPageTitleTest() {
         step("Open the main page", () -> {
@@ -29,8 +34,10 @@ public class MainPageTests extends TestBase {
         });
     }
 
+
     @Test
-    @Tag("ui")
+    @Story("Verification of the main page")
+    @Tags({@Tag("web"), @Tag("ui")})
     @DisplayName("Checking menu items on the main page")
     public void checkMenuItemsTest() {
         step("Open the main page", () -> {
@@ -47,7 +54,8 @@ public class MainPageTests extends TestBase {
     }
 
     @Test
-    @Tag("ui")
+    @Story("Verification of the main page")
+    @Tags({@Tag("web"), @Tag("ui")})
     @DisplayName("Checking Login page is available")
     public void loginPageAvailabilityTest() {
         step("Open the main page", () -> {
@@ -64,8 +72,9 @@ public class MainPageTests extends TestBase {
     }
 
     @Test
-    @Tag("ui")
-    @DisplayName("Checking validation of required fields on Login page")
+    @Story("Verification of the main page")
+    @Tags({@Tag("web"), @Tag("ui")})
+    @DisplayName("Verify that Forgot Password page is available")
     public void loginWithEmptyFieldTest() {
         step("Open the main page", () -> {
             open(mainPageURL);
@@ -76,18 +85,18 @@ public class MainPageTests extends TestBase {
             $("h1").shouldHave(text("Login"));
         });
 
-        step("Try to submit Login form with empty required fields", () -> {
-            $("#submit-btn").click();
+        step("Go to Forgot Password page", () -> {
+            $(".forgot-password-link.link").click();
         });
 
-        step("Check that the correct error messages appear", () -> {
-            $$(".error-msg").get(0).shouldHave(text("Please enter a value."));
-            $$(".error-msg").get(1).shouldHave(text("Please enter a value."));
+        step("Check that the Forgot Password page is open", () -> {
+            $("h1").shouldHave(text("Request to reset password"));
         });
     }
 
     @Test
-    @Tag("ui")
+    @Story("Verification of the main page")
+    @Tags({@Tag("web"), @Tag("ui")})
     @DisplayName("Successful opening Request Demo page")
     public void requestDemoPageTest() {
         step("Open the main page", () -> {

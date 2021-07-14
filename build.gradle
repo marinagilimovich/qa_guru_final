@@ -54,23 +54,4 @@ tasks.withType(Test) {
                 'junit.jupiter.execution.parallel.config.fixed.parallelism': System.getProperty("threads").toInteger()
         ]
     }
-
-    testLogging {
-        lifecycle {
-            events "started", "skipped", "failed", "standard_error", "standard_out"
-            exceptionFormat "short"
-        }
-    }
-}
-
-task ui(type: Test) {
-    useJUnitPlatform {
-        includeTags 'ui'
-    }
-}
-
-task api(type: Test) {
-    useJUnitPlatform {
-        includeTags 'api'
-    }
 }

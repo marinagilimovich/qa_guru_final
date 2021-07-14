@@ -1,4 +1,4 @@
-package profitero.site.autotests.config;
+package final_project.config;
 
 import org.aeonbits.owner.Config;
 

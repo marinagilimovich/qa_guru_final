@@ -1,6 +1,6 @@
-package profitero.site.autotests.helpers;
+package final_project.helpers;
 
-import profitero.site.autotests.config.DriverConfig;
+import final_project.config.DriverConfig;
 import com.codeborne.selenide.Configuration;
 import io.qameta.allure.selenide.AllureSelenide;
 import org.aeonbits.owner.ConfigFactory;
