@@ -10,7 +10,7 @@ import org.junit.jupiter.api.extension.ExtendWith;
 import static com.codeborne.selenide.WebDriverRunner.closeWebDriver;
 
 @ExtendWith({AllureJunit5.class})
-public class  TestBase {
+public class TestBase {
     @BeforeAll
     static void setUp() {
         DriverHelper.configureDriver();

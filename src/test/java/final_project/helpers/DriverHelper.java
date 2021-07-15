@@ -1,7 +1,7 @@
 package final_project.helpers;
 
-import final_project.config.DriverConfig;
 import com.codeborne.selenide.Configuration;
+import final_project.config.DriverConfig;
 import io.qameta.allure.selenide.AllureSelenide;
 import org.aeonbits.owner.ConfigFactory;
 import org.openqa.selenium.chrome.ChromeOptions;
