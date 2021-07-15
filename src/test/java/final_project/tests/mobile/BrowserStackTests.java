@@ -1,6 +1,9 @@
 package final_project.tests.mobile;
 
+import com.codeborne.selenide.ClickMethod;
+import com.codeborne.selenide.ClickOptions;
 import io.appium.java_client.MobileBy;
+import io.appium.java_client.TouchAction;
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Tag;
 import org.junit.jupiter.api.Test;
@@ -22,7 +25,8 @@ public class BrowserStackTests extends MobileTestBase {
 
         step("If opened onboarding page - press back button", () -> {
             if ($(MobileBy.id("org.wikipedia.alpha:id/view_onboarding_page_indicator")).isDisplayed()) {
-                back();
+//                back();
+                $(MobileBy.id("org.wikipedia.alpha:id/fragment_onboarding_skip_button")).click();
             }
         });
 
