@@ -26,23 +26,20 @@ public class BrowserStackTests extends MobileTestBase {
 
         step("If opened onboarding page - press back button", () -> {
             if ($(MobileBy.id("org.wikipedia.alpha:id/view_onboarding_page_indicator")).isDisplayed()) {
-//                back();
-                $(MobileBy.id("org.wikipedia.alpha:id/fragment_onboarding_skip_button"))
-                        .shouldBe(Condition.visible);
+                $(MobileBy.id("org.wikipedia.alpha:id/fragment_onboarding_skip_button")).click();
             }
-
         });
 
-//        step("Click on 'Search Wikipedia'", () -> {
-//            $(MobileBy.id("org.wikipedia.alpha:id/search_card")).click();
-//        });
-//
-//        step("Type 'MobileBrowserstack'", () -> {
-//            $(MobileBy.id("org.wikipedia.alpha:id/search_src_text")).setValue("MobileBrowserstack");
-//        });
-//
-//        step("Verify success search", () -> {
-//            $$(MobileBy.id("org.wikipedia.alpha:id/page_list_item_title")).shouldHave(sizeGreaterThan(0));
-//        });
+        step("Click on 'Search Wikipedia'", () -> {
+            $(AccessibilityId("Search Wikipedia")).click();
+        });
+
+        step("Type 'MobileBrowserstack'", () -> {
+            $(MobileBy.id("org.wikipedia.alpha:id/search_src_text")).setValue("MobileBrowserstack");
+        });
+
+        step("Verify success search", () -> {
+            $$(MobileBy.id("org.wikipedia.alpha:id/page_list_item_title")).shouldHave(sizeGreaterThan(0));
+        });
     }
 }
