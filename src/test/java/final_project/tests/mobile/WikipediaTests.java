@@ -8,8 +8,11 @@ import org.junit.jupiter.api.Tag;
 import org.junit.jupiter.api.Tags;
 import org.junit.jupiter.api.Test;
 
-import static com.codeborne.selenide.Selenide.$;
+import static com.codeborne.selenide.CollectionCondition.sizeGreaterThan;
+import static com.codeborne.selenide.Selenide.*;
+import static io.appium.java_client.MobileBy.AccessibilityId;
 import static io.qameta.allure.Allure.step;
+import static java.nio.channels.Selector.open;
 
 public class WikipediaTests extends BaseTest {
     String firstPageTitle = "The Free Encyclopedia …in over 300 languages";
@@ -32,30 +35,28 @@ public class WikipediaTests extends BaseTest {
     @Test
     @Story("Wikipedia Android Tests")
     @Tags({@Tag("mobile"), @Tag("ui")})
-    @DisplayName("Getting started test")
-    void checkingGettingStartedPagesTest() {
-        step("Check the first page", () -> {
-            checkPageTitle(firstPageTitle);
-            clickContinue();
+    @DisplayName("Search Test")
+    void simpleWikiSearchTest() {
+        step("Open app", () -> {
+            open();
         });
 
-        step("Check the second page", () -> {
-            checkPageTitle(secondPageTitle);
-            clickContinue();
+        step("If opened onboarding page - press back button", () -> {
+            if ($(MobileBy.id("org.wikipedia.alpha:id/view_onboarding_page_indicator")).isDisplayed()) {
+                back();
+            }
         });
 
-        step("Check the third page", () -> {
-            checkPageTitle(thirdPageTitle);
-            clickContinue();
+        step("Click on 'Search Wikipedia'", () -> {
+            $(AccessibilityId("Search Wikipedia")).click();
         });
 
-        step("Check the forth page", () -> {
-            checkPageTitle(forthPageTitle);
-            clickGetStartedButton();
+        step("Type 'Browserstack'", () -> {
+            $(MobileBy.id("org.wikipedia.alpha:id/search_src_text")).setValue("Browserstack");
         });
 
-        step("Check the Search page is open", () -> {
-            $(MobileBy.id("org.wikipedia.alpha:id/search_container")).should(Condition.appear);
+        step("Verify success search", () -> {
+            $$(MobileBy.id("org.wikipedia.alpha:id/page_list_item_title")).shouldHave(sizeGreaterThan(0));
         });
     }
 }
