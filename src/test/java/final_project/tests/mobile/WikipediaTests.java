@@ -2,14 +2,15 @@ package final_project.tests.mobile;
 
 import com.codeborne.selenide.Condition;
 import io.appium.java_client.MobileBy;
+import io.qameta.allure.Story;
 import org.junit.jupiter.api.DisplayName;
+import org.junit.jupiter.api.Tag;
+import org.junit.jupiter.api.Tags;
 import org.junit.jupiter.api.Test;
 
 import static com.codeborne.selenide.Selenide.$;
 import static io.qameta.allure.Allure.step;
 
-
-@DisplayName("Wikipedia Android Tests")
 public class WikipediaTests extends BaseTest {
     String firstPageTitle = "The Free Encyclopedia …in over 300 languages";
     String secondPageTitle = "New ways to explore";
@@ -29,6 +30,8 @@ public class WikipediaTests extends BaseTest {
     }
 
     @Test
+    @Story("Wikipedia Android Tests")
+    @Tags({@Tag("mobile"), @Tag("ui")})
     @DisplayName("Getting started test")
     void checkingGettingStartedPagesTest() {
         step("Check the first page", () -> {
