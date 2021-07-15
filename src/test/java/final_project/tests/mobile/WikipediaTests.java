@@ -31,7 +31,7 @@ public class WikipediaTests extends BaseTest {
         });
 
         step("Click on 'Search Wikipedia'", () -> {
-            $(AccessibilityId("Search Wikipedia")).click();
+            $(MobileBy.xpath("/hierarchy/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.widget.FrameLayout/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.widget.LinearLayout/android.view.ViewGroup/androidx.viewpager.widget.ViewPager/androidx.recyclerview.widget.RecyclerView/android.widget.FrameLayout/android.view.ViewGroup/android.widget.FrameLayout/androidx.recyclerview.widget.RecyclerView/android.widget.LinearLayout[1]/androidx.cardview.widget.CardView/android.widget.TextView")).click();
         });
 
         step("Type 'Browserstack'", () -> {
