@@ -55,6 +55,7 @@ public class MobileAndroidMobileDriver implements WebDriverProvider {
         desiredCapabilities.setCapability("device", BROWSER_STACK_CONFIG_MOBILE.device());
         desiredCapabilities.setCapability("os_version", BROWSER_STACK_CONFIG_MOBILE.osVersion());
         desiredCapabilities.setCapability("app", BROWSER_STACK_CONFIG_MOBILE.app());
+        desiredCapabilities.setCapability("browserstack.appium_version", "1.21.0");
 
         return new AndroidDriver<>(MobileBrowserStackHelper.getBrowserstackUrl(), desiredCapabilities);
     }
