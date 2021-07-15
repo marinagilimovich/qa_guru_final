@@ -15,23 +15,6 @@ import static io.qameta.allure.Allure.step;
 import static java.nio.channels.Selector.open;
 
 public class WikipediaTests extends BaseTest {
-    String firstPageTitle = "The Free Encyclopedia …in over 300 languages";
-    String secondPageTitle = "New ways to explore";
-    String thirdPageTitle = "Reading lists with sync";
-    String forthPageTitle = "Send anonymous data";
-
-    void checkPageTitle(String title) {
-        $(MobileBy.id("org.wikipedia.alpha:id/primaryTextView")).shouldHave(Condition.text(title));
-    }
-
-    void clickContinue() {
-        $(MobileBy.id("org.wikipedia.alpha:id/fragment_onboarding_forward_button")).click();
-    }
-
-    void clickGetStartedButton() {
-        $(MobileBy.id("org.wikipedia.alpha:id/fragment_onboarding_done_button")).click();
-    }
-
     @Test
     @Story("Wikipedia Android Tests")
     @Tags({@Tag("mobile"), @Tag("ui")})
