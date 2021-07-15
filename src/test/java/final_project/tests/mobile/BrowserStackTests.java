@@ -27,7 +27,7 @@ public class BrowserStackTests extends MobileTestBase {
         });
 
         step("Click on 'Search Wikipedia'", () -> {
-            $(AccessibilityId("Search Wikipedia")).click();
+            $(MobileBy.id("org.wikipedia.alpha:id/search_card")).click();
         });
 
         step("Type 'MobileBrowserstack'", () -> {
