@@ -18,7 +18,7 @@ public class RegressInTests {
         RestAssured.baseURI = "https://reqres.in";
     }
 
-//    @Test
+    @Test
     @Story("Get requests")
     @DisplayName("Get a single resource")
     @Tags({@Tag("web"), @Tag("api")})
@@ -33,7 +33,7 @@ public class RegressInTests {
     }
 
 
-//    @Test
+    @Test
     @Story("Get requests")
     @DisplayName("Get a single resource, negative test")
     @Tags({@Tag("web"), @Tag("api")})
@@ -46,7 +46,7 @@ public class RegressInTests {
     }
 
 
-//    @Test
+    @Test
     @Story("Post requests")
     @DisplayName("Successful registration test")
     @Tags({@Tag("web"), @Tag("api")})
@@ -64,7 +64,7 @@ public class RegressInTests {
     }
 
 
-//    @Test
+    @Test
     @Story("Post requests")
     @DisplayName("Successful login test")
     @Tags({@Tag("web"), @Tag("api")})
@@ -81,7 +81,7 @@ public class RegressInTests {
     }
 
 
-//    @Test
+    @Test
     @Story("Put requests")
     @DisplayName("Successful update of user data")
     @Tags({@Tag("web"), @Tag("api")})

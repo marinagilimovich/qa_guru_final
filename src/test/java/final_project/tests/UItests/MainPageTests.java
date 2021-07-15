@@ -19,7 +19,7 @@ import static io.qameta.allure.Allure.step;
 public class MainPageTests extends TestBase {
     String mainPageURL = "https://www.profitero.com/";
 
-//    @Test
+    @Test
     @Story("Verification of the main page")
     @Tags({@Tag("web"), @Tag("ui")})
     @DisplayName("Opening the main page")
@@ -35,7 +35,7 @@ public class MainPageTests extends TestBase {
     }
 
 
-//    @Test
+    @Test
     @Story("Verification of the main page")
     @Tags({@Tag("web"), @Tag("ui")})
     @DisplayName("Checking menu items on the main page")
@@ -53,7 +53,7 @@ public class MainPageTests extends TestBase {
         });
     }
 
-//    @Test
+    @Test
     @Story("Verification of the main page")
     @Tags({@Tag("web"), @Tag("ui")})
     @DisplayName("Checking Login page is available")
@@ -71,7 +71,7 @@ public class MainPageTests extends TestBase {
         });
     }
 
-//    @Test
+    @Test
     @Story("Verification of the main page")
     @Tags({@Tag("web"), @Tag("ui")})
     @DisplayName("Verify that Forgot Password page is available")
@@ -94,7 +94,7 @@ public class MainPageTests extends TestBase {
         });
     }
 
-//    @Test
+    @Test
     @Story("Verification of the main page")
     @Tags({@Tag("web"), @Tag("ui")})
     @DisplayName("Successful opening Request Demo page")
