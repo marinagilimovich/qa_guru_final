@@ -1,20 +1,25 @@
 package final_project.helpers;
 
-import final_project.config.MobileDeviceHost;
+import com.codeborne.selenide.Selenide;
 import io.qameta.allure.Attachment;
 import org.openqa.selenium.OutputType;
 import org.openqa.selenium.TakesScreenshot;
 import org.openqa.selenium.remote.RemoteWebDriver;
 
+import java.nio.charset.StandardCharsets;
+
 import static com.codeborne.selenide.WebDriverRunner.getWebDriver;
-import static final_project.config.MobileProjectData.deviceHost;
+import static org.openqa.selenium.logging.LogType.BROWSER;
 
-
-public class MobileAttachHelper {
-
+public class MobileAttach {
     @Attachment(value = "{attachName}", type = "text/plain")
     public static String attachAsText(String attachName, String message) {
         return message;
+    }
+
+    @Attachment(value = "Page source", type = "text/plain")
+    public static byte[] pageSource() {
+        return getWebDriver().getPageSource().getBytes(StandardCharsets.UTF_8);
     }
 
     @Attachment(value = "{attachName}", type = "image/png")
@@ -25,20 +30,18 @@ public class MobileAttachHelper {
     @Attachment(value = "Video", type = "text/html", fileExtension = ".html")
     public static String attachVideo(String sessionId) {
         return "<html><body><video width='100%' height='100%' controls autoplay><source src='"
-                + getVideoUrl(sessionId)
+                + MobileBrowserstack.videoUrl(sessionId)
                 + "' type='video/mp4'></video></body></html>";
-    }
-
-    private static String getVideoUrl(String sessionId) {
-        if (deviceHost().equals(MobileDeviceHost.BROWSER_STACK)) {
-            return MobileBrowserStackHelper.getBrowserstackVideoUrl(sessionId);
-        } else if (deviceHost().equals(MobileDeviceHost.SELENOID)) {
-            return MobileAppiumHelper.getSelenoidVideoUrl(sessionId);
-        }
-        return null;
     }
 
     public static String getSessionId() {
         return ((RemoteWebDriver) getWebDriver()).getSessionId().toString();
+    }
+
+    public static void browserConsoleLogs() {
+        attachAsText(
+                "Browser console logs",
+                String.join("\n", Selenide.getWebDriverLogs(BROWSER))
+        );
     }
 }

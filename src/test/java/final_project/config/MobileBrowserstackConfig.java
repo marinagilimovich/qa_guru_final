@@ -2,32 +2,22 @@ package final_project.config;
 
 import org.aeonbits.owner.Config;
 
-import static org.aeonbits.owner.Config.LoadType.MERGE;
-
-@Config.LoadPolicy(MERGE)
+@Config.LoadPolicy(Config.LoadType.MERGE)
 @Config.Sources({
         "system:properties",
-        "classpath:config/mobileBrowserStack.properties"
+        "classpath:config/browserstack.properties"
 })
+
 public interface MobileBrowserstackConfig extends Config {
-    @Key("bs.url")
-    String url();
+    @Key("browserstack.hub.url")
+    String hubUrl();
 
-    @Key("bs.sessions.url")
-    String sessionsUrl();
+    @Key("browserstack.session.url")
+    String sessionUrl();
 
-    @Key("bs.login")
-    String bsLogin();
+    @Key("browserstack.user")
+    String username();
 
-    @Key("bs.password")
-    String bsPassword();
-
-    @Key("bs.device")
-    String device();
-
-    @Key("bs.os.version")
-    String osVersion();
-
-    @Key("bs.app")
-    String app();
+    @Key("browserstack.key")
+    String key();
 }

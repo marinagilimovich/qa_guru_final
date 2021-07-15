@@ -1,11 +1,8 @@
 package final_project.tests.mobile;
 
-import com.codeborne.selenide.Condition;
 import io.appium.java_client.MobileBy;
-import io.qameta.allure.Story;
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Tag;
-import org.junit.jupiter.api.Tags;
 import org.junit.jupiter.api.Test;
 
 import static com.codeborne.selenide.CollectionCondition.sizeGreaterThan;
@@ -14,11 +11,10 @@ import static io.appium.java_client.MobileBy.AccessibilityId;
 import static io.qameta.allure.Allure.step;
 import static java.nio.channels.Selector.open;
 
-public class WikipediaTests extends BaseTest {
+public class BrowserStackTests extends MobileTestBase {
+    @Tag("selenide_android")
     @Test
-    @Story("Wikipedia Android Tests")
-    @Tags({@Tag("mobile"), @Tag("ui")})
-    @DisplayName("Search Test")
+    @DisplayName("Search on Wikipedia test")
     void simpleWikiSearchTest() {
         step("Open app", () -> {
             open();
@@ -31,12 +27,11 @@ public class WikipediaTests extends BaseTest {
         });
 
         step("Click on 'Search Wikipedia'", () -> {
-            $(MobileBy.id("org.wikipedia.alpha:id/navigation_bar_item_icon_view")).click();
-            $(MobileBy.cssSelector("android.widget.TextView")).click();
+            $(AccessibilityId("Search Wikipedia")).click();
         });
 
-        step("Type 'Browserstack'", () -> {
-            $(MobileBy.id("org.wikipedia.alpha:id/search_src_text")).setValue("Browserstack");
+        step("Type 'MobileBrowserstack'", () -> {
+            $(MobileBy.id("org.wikipedia.alpha:id/search_src_text")).setValue("MobileBrowserstack");
         });
 
         step("Verify success search", () -> {
