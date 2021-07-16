@@ -15,7 +15,7 @@
 
 `Java` `Junit5` `Selenide` `Gradle` `Selenoid` `Jenkins` `Allure Report` `Telegram Bot`
 
-### [Jenkins](https://jenkins.autotests.cloud/job/c05-marinahil-final-project/) project
+### [Jenkins](https://jenkins.autotests.cloud/job/c05-marinahil-final-project/) project:
 Run Builds Statistics
 
 <img src="src/test/resources/img/jenkins1.png" width="40%">
