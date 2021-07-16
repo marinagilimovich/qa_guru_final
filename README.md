@@ -17,9 +17,11 @@
 
 ### [Jenkins](https://jenkins.autotests.cloud/job/c05-marinahil-final-project/) project
 Run Builds Statistics
+
 <img src="src/test/resources/img/jenkins1.png" width="40%">
 
 Parameters Configuration
+
 <img src="src/test/resources/img/jenkins2.png" width="40%">
 
 ### [Allure](https://jenkins.autotests.cloud/job/c05-marinahil-hw11/7/allure) report:
