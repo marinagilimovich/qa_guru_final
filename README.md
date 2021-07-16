@@ -34,7 +34,7 @@ Parameters Configuration
 
 <img src="src/test/resources/img/a1.png" width="40%">   <img src="src/test/resources/img/a2.png" width="40%">
 
-<img src="src/test/resources/img/a4.png" width="40%">   <img src="src/test/resources/img/a5.png" width="40%">
+<img src="src/test/resources/img/a5.png" width="40%">   <img src="src/test/resources/img/a6.png" width="40%">
 
 Parallel Tests Execution
 
