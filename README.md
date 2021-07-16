@@ -25,8 +25,13 @@ Parameters Configuration
 <img src="src/test/resources/img/jenkins2.png" width="40%">
 
 ### [Allure](https://jenkins.autotests.cloud/job/c05-marinahil-hw11/7/allure) report:
-<img src="src/test/resources/img/a1.png" width="40%"> <img src="src/test/resources/img/a2.png" width="40%">
-<img src="src/test/resources/img/a4.png" width="40%"> <img src="src/test/resources/img/a5.png" width="40%">
+<img src="src/test/resources/img/a1.png" width="40%"> 
+
+<img src="src/test/resources/img/a2.png" width="40%">
+
+<img src="src/test/resources/img/a4.png" width="40%"> 
+
+<img src="src/test/resources/img/a5.png" width="40%">
 
 Parallel Tests Execution
 
