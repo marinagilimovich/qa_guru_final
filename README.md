@@ -15,6 +15,20 @@
 
 `Java` `Junit5` `Selenide` `Gradle` `Selenoid` `Jenkins` `Allure Report` `Telegram Bot`
 
+### Test execution:
+
+Local tests execution:
+
+> gradle clean test
+
+Parallel tests execution:
+
+> gradle clean test -Dthreads=5
+
+Remote tests execution:
+
+> gradle clean test -Ddriver=remote 
+
 ### [Jenkins](https://jenkins.autotests.cloud/job/c05-marinahil-final-project/) project:
 Run Builds Statistics
 
