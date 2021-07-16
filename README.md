@@ -19,15 +19,15 @@
 
 Local tests execution:
 
-< gradle clean test >
+    gradle clean test
 
 Parallel tests execution:
 
-< gradle clean test -Dthreads=5 >
+    gradle clean test -Dthreads=5
 
 Remote tests execution:
 
-< gradle clean test -Ddriver=remote >
+    gradle clean test -Ddriver=remote
 
 ### [Jenkins](https://jenkins.autotests.cloud/job/c05-marinahil-final-project/) project:
 Run Builds Statistics
