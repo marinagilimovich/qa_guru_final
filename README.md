@@ -1,4 +1,7 @@
-## **The example of [Profitero](https://www.profitero.com) web-site testing**
+## The examples of UI, API and Mobile tests:
+[] UI tests for [Profitero](https://www.profitero.com) web-site
+[] API tests for [Reqres](https://reqres.in/) web-site
+[] Mobile tests for Wikipedia android application
 
 ### Used technologies:
 ![Java](src/test/resources/img/icons/Java.png)
