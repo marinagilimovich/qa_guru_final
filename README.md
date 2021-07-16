@@ -34,7 +34,7 @@ Run Builds Statistics
 
 <img src="src/test/resources/img/jenkins1.png" width="40%">
 
-Parameters Configuration
+Parameters Сonfiguration
 
 <img src="src/test/resources/img/jenkins2.png" width="40%">
 
@@ -44,7 +44,7 @@ Parameters Configuration
 <img src="src/test/resources/img/jira.png" width="60%">
 
 
-### [Allure](https://allure.autotests.cloud/project/261/dashboards) report:
+### [Allure](https://allure.autotests.cloud/project/261/dashboards) integration:
 
 <img src="src/test/resources/img/a1.png" width="40%">   <img src="src/test/resources/img/a2.png" width="40%">
 
