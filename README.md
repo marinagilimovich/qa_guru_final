@@ -45,5 +45,5 @@ Parallel Tests Execution
 <img src="src/test/resources/img/Video.gif" width="60%">
 
 
-### Message sent to Telegram:
+### Telegram notification:
 <img src="src/test/resources/img/telegram.jpg" width="30%">
