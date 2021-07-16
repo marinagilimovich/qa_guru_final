@@ -24,14 +24,17 @@ Parameters Configuration
 
 <img src="src/test/resources/img/jenkins2.png" width="40%">
 
-### [Allure](https://jenkins.autotests.cloud/job/c05-marinahil-hw11/7/allure) report:
-<img src="src/test/resources/img/a1.png" width="40%"> 
 
-<img src="src/test/resources/img/a2.png" width="40%">
+### [Jira](https://jira.autotests.cloud/browse/HOMEWORK-6) integration:
 
-<img src="src/test/resources/img/a4.png" width="40%"> 
+<img src="src/test/resources/img/jira.png" width="60%">
 
-<img src="src/test/resources/img/a5.png" width="40%">
+
+### [Allure](https://allure.autotests.cloud/project/261/dashboards) report:
+
+<img src="src/test/resources/img/a1.png" width="40%">   <img src="src/test/resources/img/a2.png" width="40%">
+
+<img src="src/test/resources/img/a4.png" width="40%">   <img src="src/test/resources/img/a5.png" width="40%">
 
 Parallel Tests Execution
 
@@ -39,8 +42,8 @@ Parallel Tests Execution
 
 
 ### Video of a running test:
-<img src="src/test/resources/img/video.gif" width="60%">
+<img src="src/test/resources/img/Video.gif" width="60%">
+
 
 ### Message sent to Telegram:
-<img src="src/test/resources/img/telegram.png" width="30%">
-
+<img src="src/test/resources/img/telegram.jpg" width="30%">
