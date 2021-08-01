@@ -1,4 +1,4 @@
-package final_project.tests.API;
+package final_project.tests.api;
 
 import io.qameta.allure.Feature;
 import io.qameta.allure.Owner;

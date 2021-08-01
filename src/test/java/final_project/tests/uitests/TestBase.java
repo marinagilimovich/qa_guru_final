@@ -1,4 +1,4 @@
-package final_project.tests.UItests;
+package final_project.tests.uitests;
 
 import final_project.helpers.AttachmentsHelper;
 import final_project.helpers.DriverHelper;
