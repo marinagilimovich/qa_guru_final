@@ -15,12 +15,26 @@
 
 `Java` `Junit5` `Selenide` `Gradle` `Selenoid` `Jenkins` `Allure Report` `Telegram Bot`
 
+### Test execution:
+
+Local tests execution:
+
+    gradle clean test
+
+Parallel tests execution:
+
+    gradle clean test -Dthreads=5
+
+Remote tests execution:
+
+    gradle clean test -Ddriver=remote
+
 ### [Jenkins](https://jenkins.autotests.cloud/job/c05-marinahil-final-project/) project:
 Run Builds Statistics
 
 <img src="resources/img/jenkins1.png" width="40%">
 
-Parameters Configuration
+Parameters Сonfiguration
 
 <img src="resources/img/jenkins2.png" width="40%">
 
@@ -30,7 +44,7 @@ Parameters Configuration
 <img src="resources/img/jira.png" width="60%">
 
 
-### [Allure](https://allure.autotests.cloud/project/261/dashboards) report:
+### [Allure](https://allure.autotests.cloud/project/261/dashboards) integration:
 
 <img src="resources/img/a1.png" width="40%">   <img src="resources/img/a2.png" width="40%">
 
